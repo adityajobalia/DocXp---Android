@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="@dimen/margin_5dp"
+    android:layout_marginRight="@dimen/margin_5dp"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/patient_cardview_home"
+        android:layout_width="130dp"
+        android:layout_height="140dp"
+        app:cardCornerRadius="@dimen/radius_5dp"
+        android:layout_marginLeft="@dimen/margin_5dp"
+        android:layout_margin="@dimen/margin_5dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_5dp"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/patient_fab_home"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:elevation="@dimen/width_24dp"
+                android:src="@drawable/dentist"
+                app:civ_border_color="@color/colorTransperant"
+                app:civ_border_width="0dp"
+                tools:ignore="NotSibling"
+                />
+
+            <TextView
+                android:id="@+id/patient_textview_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/patient_fab_home"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

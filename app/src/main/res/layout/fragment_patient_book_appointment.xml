@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativelayout_main_patient_bookappointment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.docxp.patientfragment.PatientBookAppointmentFragment">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollview_pateint_book_appointment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginBottom="@dimen/margin_45dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/patient_bookappointment_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_marginStart="7dp"
+            android:padding="@dimen/padding_20dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textinputlayout_patient_bookappointment_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                app:hintAnimationEnabled="true"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium">
+
+                <EditText
+                    android:id="@+id/edittext_patient_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:inputType="textPersonName"
+                    android:paddingStart="@dimen/padding_10dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textinputlayout_patient_bookappointment_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textinputlayout_patient_bookappointment_name"
+                android:layout_marginTop="@dimen/margin_5dp"
+                app:hintAnimationEnabled="true"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium">
+
+                <EditText
+                    android:id="@+id/edittext_patient_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/padding_10dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textinputlayout_patient_bookappointment_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textinputlayout_patient_bookappointment_email"
+                android:layout_marginTop="@dimen/margin_5dp"
+                app:hintAnimationEnabled="true"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium">
+
+                <EditText
+                    android:id="@+id/edittext_patient_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/contact"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:paddingStart="@dimen/padding_10dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/radiogroup_patient_bookappointment_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textinputlayout_patient_bookappointment_contact"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radiobtn_patient_bookappointment_gender_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/male"
+                    android:textSize="@dimen/font_16" />
+
+                <RadioButton
+                    android:id="@+id/radiobtn_patient_bookappointment_gender_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_50dp"
+                    android:text="@string/female"
+                    android:textSize="@dimen/font_16"
+
+                    />
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/spinner_pateint_bookappointmenrt_city"
+                android:layout_width="@dimen/width_150"
+                android:layout_height="@dimen/height_25"
+                android:layout_below="@id/radiogroup_patient_bookappointment_gender"
+                android:layout_marginTop="@dimen/margin_10dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinner_pateint_bookappointmenrt_speciality"
+                android:layout_width="@dimen/width_150"
+                android:layout_height="@dimen/height_25"
+                android:layout_below="@id/radiogroup_patient_bookappointment_gender"
+                android:layout_toRightOf="@id/spinner_pateint_bookappointmenrt_city"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinner_pateint_bookappointmenrt_hospital"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_25"
+                android:layout_below="@id/spinner_pateint_bookappointmenrt_city"
+                android:layout_marginTop="@dimen/margin_10dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinner_pateint_bookappointmenrt_doctor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_25"
+                android:layout_below="@id/spinner_pateint_bookappointmenrt_hospital"
+                android:layout_marginTop="@dimen/margin_10dp"
+                 />
+
+            <RelativeLayout
+                android:id="@+id/relativelayout_patient_book_appointment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinner_pateint_bookappointmenrt_doctor"
+                >
+
+                <EditText
+                    android:id="@+id/edittext_patient_book_apppointment_date"
+                    android:layout_width="@dimen/width_150"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/date"
+                    android:paddingStart="@dimen/padding_10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edittext_patient_book_apppointment_time"
+                    android:layout_width="@dimen/width_150"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/edittext_patient_book_apppointment_date"
+                    android:hint="@string/time"
+                    android:paddingStart="@dimen/padding_10dp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/register_button_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativelayout_patient_book_appointment"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_marginRight="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@drawable/custom_button"
+                android:text="@string/book_appointment"
+                android:textAllCaps="false"
+                android:textColor="#FFF"
+                android:textSize="@dimen/font_18" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

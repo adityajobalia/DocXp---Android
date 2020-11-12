@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_10dp">
+            <ImageView
+                android:layout_width="@dimen/width_50"
+                android:layout_height="@dimen/height_50"
+                android:id="@+id/imgview_notification"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/profile"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification Header"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_18"
+                android:textColor="@color/colorButton"
+                android:id="@+id/textviewt_notification_header"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/imgview_notification"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview_notification_details"
+                android:text="djsffsdfdsfsdf"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/imgview_notification"
+                android:layout_below="@id/textviewt_notification_header"/>
+
+                />
+
+
+
+        </RelativeLayout>
+
+
+</RelativeLayout>

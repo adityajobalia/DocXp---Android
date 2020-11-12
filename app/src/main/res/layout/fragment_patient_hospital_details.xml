@@ -1,0 +1,203 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.docxp.patientfragment.PatientHospitalDetails">
+
+   <!-- <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_pateint_hospitaldetails"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_130">
+
+    </android.support.v4.view.ViewPager>-->
+    <ImageView
+        android:layout_width="1000dp"
+        android:layout_height="130dp"
+        android:id="@+id/imageview_patient_hospital_details"/>
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/pageindicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_20"
+        android:layout_alignBottom="@id/imageview_patient_hospital_details" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollview_pateint_hospital_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pageindicator"
+        android:layout_marginBottom="@dimen/margin_45dp"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/relativelayout_pateint_hospital_details"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/scrollview_pateint_hospital_details"
+            android:layout_centerHorizontal="true"
+            android:scrollbars="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardview_pateint_hospital_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/default_circle_indicator_radius">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_5dp">
+
+                    <TextView
+                        android:id="@+id/textview_hospital_title"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:text="Hospital Name"
+                        android:textColor="@color/colorButton"
+                        android:textSize="@dimen/font_18"
+                        android:textStyle="bold" />
+
+                    <!-- <android.support.design.widget.FloatingActionButton
+                         android:id="@+id/fabbutton_hospitaldetails_call"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="@dimen/margin_10dp"
+                         app:backgroundTint="@color/colorButton"
+                         android:layout_below="@id/textview_hospital_title"
+                         android:src="@android:drawable/ic_menu_call" />
+ -->
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/fabbutton_hospitaldetails_direction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/textview_hospital_title"
+                        android:layout_marginRight="@dimen/margin_20dp"
+                        android:src="@android:drawable/ic_menu_directions"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:fabSize="auto" />
+
+                    <!--<Button
+                        android:id="@+id/button_hospitaldetails_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textview_hospital_title"
+                        android:layout_marginLeft="@dimen/margin_10dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:background="@color/colorPrimary"
+                        android:drawableEnd="@android:drawable/ic_menu_call"
+                        android:padding="@dimen/padding_3dp"
+                        android:shadowRadius="@integer/default_circle_indicator_orientation"
+                        android:text="Calling"
+                        android:textColor="@color/colorWhite" />
+
+                    <Button
+                        android:id="@+id/button_hospitaldetails_direction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textview_hospital_title"
+                        android:layout_marginLeft="@dimen/margin_10dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:layout_toRightOf="@id/button_hospitaldetails_call"
+                        android:background="@color/colorPrimary"
+                        android:drawableEnd="@android:drawable/ic_menu_directions"
+                        android:padding="@dimen/padding_3dp"
+                        android:shadowRadius="@integer/default_circle_indicator_orientation"
+                        android:text="Direction"
+                        android:textColor="@color/colorWhite" />
+
+                    <Button
+                        android:id="@+id/button_hospitaldetails_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textview_hospital_title"
+                        android:layout_marginLeft="@dimen/margin_10dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:layout_toRightOf="@id/button_hospitaldetails_direction"
+                        android:background="@color/colorPrimary"
+                        android:drawableEnd="@android:drawable/ic_menu_share"
+                        android:padding="@dimen/padding_3dp"
+                        android:shadowRadius="@integer/default_circle_indicator_orientation"
+                        android:text="Share"
+                        android:textColor="@color/colorWhite" />-->
+
+                    <TextView
+                        android:id="@+id/textview_hospitaldetails_address"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_direction"
+                        android:drawablePadding="@dimen/padding_5dp"
+                        android:layout_below="@id/textview_hospital_title"
+                        android:layout_marginLeft="@dimen/margin_10dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                         />
+
+                    <TextView
+                        android:id="@+id/textview_hospitaldetails_contect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textview_hospitaldetails_address"
+                        android:layout_marginLeft="@dimen/margin_10dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:autoLink="phone"
+                        android:drawableLeft="@drawable/ic_mobile"
+                        android:drawablePadding="@dimen/padding_7dp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/textview_hospitaldetails_website"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_website"
+                        android:drawablePadding="@dimen/padding_7dp"
+                        android:autoLink="web"
+                        android:layout_below="@id/textview_hospitaldetails_contect"
+                        android:layout_marginLeft="@dimen/margin_10dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                         />
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardview_pateint_hospital_details"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_10dp">
+
+                <TextView
+                    android:id="@+id/textview_hospitaldeatils_doctor_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/doctor_list"
+                    android:textColor="@color/colorButton"
+                    android:textSize="@dimen/font_18"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_pateint_hospital_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/margin_50dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:scrollbars="horizontal">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
+

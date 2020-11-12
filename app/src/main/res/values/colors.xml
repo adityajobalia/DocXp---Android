@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- <color name="colorPrimary">#6791bb</color>
+     <color name="colorPrimaryDark">#A46791BB</color>
+     <color name="colorPrimary">#2795d6</color>
+     <color name="colorPrimaryDark">#FF058FE1</color>-->
+    <color name="colorPrimary">#68b5f4</color>
+    <color name="colorPrimaryDark">#FF599ACF</color>
+    <color name="colorAccent">#ed970c</color>
+    <color name="colorShadow">#f2e1dede</color>
+    <color name="colorButton">#0A75ED</color>
+    <color name="colorStart">#f5addafc</color>
+    <color name="colorCenter">#8ec3e1f9</color>
+    <color name="colorEnd">#22addafc</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colortrans">#a6faf5f5</color>
+    <color name="colorHeading">#1647a9</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorTransperant">#caffffff</color>
+    <color name="colorToolbar">#68FFFFFF</color>
+    <color name="colorToolbarShadow">#7B949090</color>
+    <color name="colorGoogleButton">#FFE22739</color>
+</resources>

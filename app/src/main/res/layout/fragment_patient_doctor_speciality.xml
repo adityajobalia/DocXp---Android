@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.project.docxp.patientfragment.PatientDoctorSpecialityFragment">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swiperefresh_patient_doctorspecciality"
+       >
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollview_doc_speciality"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginBottom="@dimen/margin_80dp"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentStart="true">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_patient_doctorspecciality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout"
+            android:scrollbars="vertical">
+
+
+        </android.support.v7.widget.RecyclerView>
+    </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

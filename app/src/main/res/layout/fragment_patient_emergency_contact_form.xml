@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:padding="@dimen/padding_10dp"
+    tools:context="com.project.docxp.patientfragment.PatientEmergencyContactFormFragment">
+
+    <TextView
+        android:id="@+id/Textview_patient_emergency_contact_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Add Contact Details"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/font_20"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_20dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_20dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayer_patient_emergency_contact_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30dp"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium">
+
+            <EditText
+                android:id="@+id/edittext_patient_emergency_contact_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/padding_10dp"
+                android:drawableStart="@drawable/ic_user"
+                android:fadingEdgeLength="@dimen/font_16"
+                android:hint="@string/name"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/font_20" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayer_patient_emergency_contact_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textInputLayer_patient_emergency_contact_name"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium">
+
+            <EditText
+                android:id="@+id/edittextpatient_emergency_contact_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/padding_10dp"
+                android:drawableStart="@drawable/ic_email"
+                android:fadingEdgeLength="@dimen/font_16"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/font_20" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayer_patient_emergency_contact_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textInputLayer_patient_emergency_contact_email"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium">
+
+            <EditText
+                android:id="@+id/edittext_patient_emergency_contact_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/padding_15dp"
+                android:drawableStart="@drawable/ic_mobile"
+                android:fadingEdgeLength="@dimen/font_16"
+                android:hint="@string/mobile"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/font_20" />
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:id="@+id/button_patient_emergency_contact_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textInputLayer_patient_emergency_contact_mobile"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:background="@drawable/custom_button_event"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/font_20" />
+    </RelativeLayout>
+
+</RelativeLayout>

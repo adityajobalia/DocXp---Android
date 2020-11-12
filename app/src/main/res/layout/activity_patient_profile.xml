@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.docxp.DocProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/prfile_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_300"
+        android:background="@color/colorPrimary">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pateint_profile_image"
+            android:layout_width="@dimen/width_160"
+            android:layout_height="@dimen/height_160"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:src="@drawable/profile"
+            app:civ_border_color="@color/colortrans"
+            app:civ_border_width="@dimen/width_0" />
+        <!--<Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload"
+            android:id="@+id/patient_profile_btn"
+            />-->
+      <!--  <TextView
+            android:id="@+id/textview_profile_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pateint_profile_image"
+            android:layout_centerHorizontal="true"
+            android:text="@string/change_profile"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/font_18" />-->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabbutton_patient_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pateint_profile_image"
+            android:layout_alignEnd="@+id/pateint_profile_image"
+            android:src="@android:drawable/ic_menu_camera" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_400"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_240dp"
+        app:cardCornerRadius="@dimen/cardview_default_radius"
+        app:cardElevation="@dimen/margin_20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_25dp"
+            android:padding="@dimen/padding_10dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/doc_recyclerview_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical">
+
+            </android.support.v7.widget.RecyclerView>
+            <!-- <TextView
+                 android:id="@+id/pateint_mobile"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:padding="@dimen/padding_10dp"
+                 android:text="@string/mobile"
+                 android:textSize="@dimen/font_16" />
+
+             <TextView
+                 android:id="@+id/pateint_mobile_content"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_above="@+id/pateint_email"
+                 android:layout_marginStart="30dp"
+                 android:layout_toEndOf="@+id/doc_password"
+                 android:padding="@dimen/padding_10dp"
+                 android:text="+91 1234567890"
+                 android:textSize="@dimen/font_16" />
+
+             <ImageView
+                 android:id="@+id/pateint_mobile_update"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_toRightOf="@id/pateint_mobile_content"
+                 android:padding="@dimen/padding_10dp"
+                 android:src="@drawable/update_btn" />
+
+             <View
+                 android:id="@+id/pateint_view_mobile"
+                 android:layout_width="match_parent"
+                 android:layout_height="2dp"
+                 android:layout_below="@id/pateint_mobile"
+                 android:background="@color/colorPrimary" />
+
+             <TextView
+                 android:id="@+id/pateint_email"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/pateint_view_mobile"
+                 android:padding="@dimen/padding_10dp"
+                 android:text="@string/email"
+                 android:textSize="@dimen/font_16" />
+
+             <TextView
+                 android:id="@+id/pateint_email_content"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBaseline="@+id/pateint_email"
+                 android:layout_alignBottom="@+id/pateint_email"
+                 android:layout_alignEnd="@+id/pateint_mobile_content"
+                 android:padding="@dimen/padding_10dp"
+                 android:text="abc@gmail.com"
+                 android:textSize="@dimen/font_16" />
+
+             <ImageView
+                 android:id="@+id/pateint_email_update"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/pateint_mobile_update"
+                 android:layout_marginTop="@dimen/margin_5dp"
+                 android:layout_toRightOf="@id/pateint_email_content"
+                 android:padding="@dimen/padding_10dp"
+                 android:src="@drawable/update_btn" />
+
+             <View
+                 android:id="@+id/pateint_view_email"
+                 android:layout_width="match_parent"
+                 android:layout_height="2dp"
+                 android:layout_below="@id/pateint_email"
+                 android:background="@color/colorPrimary" />
+
+             <TextView
+                 android:id="@+id/doc_password"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/pateint_view_email"
+                 android:padding="@dimen/padding_10dp"
+                 android:text="@string/password"
+                 android:textSize="@dimen/font_16" />
+
+             <TextView
+                 android:id="@+id/pateint_password_content"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignEnd="@+id/pateint_email_content"
+                 android:layout_below="@+id/pateint_email"
+                 android:padding="@dimen/padding_10dp"
+                 android:text="abc123" />
+             <ImageView
+                 android:id="@+id/pateint_passsword_update"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/pateint_email_update"
+                 android:layout_marginTop="@dimen/margin_5dp"
+                 android:layout_toRightOf="@id/pateint_email_content"
+                 android:padding="@dimen/padding_10dp"
+                 android:src="@drawable/update_btn" />
+
+ -->
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

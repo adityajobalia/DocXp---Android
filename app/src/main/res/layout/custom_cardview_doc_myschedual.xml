@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/doc_myschedual_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_5dp"
+        app:cardCornerRadius="@dimen/cardview_default_radius"
+        app:contentPadding="@dimen/padding_5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_5dp">
+
+            <TextView
+                android:id="@+id/textview_doc_myschedula_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fnjdsfjskfsjkfhdsjf"
+                android:textStyle="bold"
+                android:textColor="@color/colorButton"
+                android:textSize="@dimen/font_18" />
+            <TextView
+                android:id="@+id/textview_doc_myschedula_Gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview_doc_myschedula_Name"
+                android:text="Gender" />
+
+            <!--<TextView
+                android:id="@+id/textview_doc_myschedula_Age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview_doc_myschedula_Name"
+                android:layout_toRightOf="@id/textview_doc_myschedula_Gender"
+                android:text=" 30 years" />-->
+            <TextView
+                android:id="@+id/textview_doc_myschedula_Email"
+                android:layout_width="@dimen/width_230"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_email"
+                android:layout_below="@id/textview_doc_myschedula_Gender"
+                android:text="abc@gmail.com" />
+
+
+            <TextView
+                android:id="@+id/textview_doc_myschedula_Contect"
+                android:layout_width="@dimen/width_160"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/padding_7dp"
+                android:drawableLeft="@drawable/ic_mobile"
+                android:layout_below="@id/textview_doc_myschedula_Email"
+                android:text="1234567890" />
+
+
+
+            <TextView
+                android:id="@+id/textview_doc_myschedula_Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/padding_8dp"
+                android:layout_marginTop="@dimen/padding_3dp"
+                android:drawableLeft="@drawable/ic_datetime"
+                android:layout_below="@id/textview_doc_myschedula_Contect"
+                android:text="Date" />
+            <TextView
+                android:id="@+id/textview_doc_myschedula_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_5dp"
+                android:layout_marginTop="@dimen/padding_3dp"
+                android:layout_below="@id/textview_doc_myschedula_Contect"
+                android:layout_toRightOf="@id/textview_doc_myschedula_Date"
+                android:text="Time" />
+
+            <Button
+                android:id="@+id/button_doc_myschedual_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_40"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorWhite"
+                android:text="@string/done"
+                android:background="@drawable/custom_button"
+                 />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

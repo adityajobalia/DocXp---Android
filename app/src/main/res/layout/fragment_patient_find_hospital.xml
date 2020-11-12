@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/findhospital"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.docxp.patientfragment.PatientFindHospitalFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_patient_find_hospital"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_30"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/padding_10dp"></RelativeLayout>
+
+    <!-- <android.support.v7.widget.SearchView
+         android:id="@+id/searchview_pateint_find_hospital"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:layout_marginLeft="@dimen/margin_20dp"
+         android:layout_marginRight="@dimen/margin_20dp"
+         android:layout_marginTop="@dimen/margin_10dp"
+         android:background="@drawable/custom_edittext_search"
+         android:iconifiedByDefault="false" />
+     <android.support.v7.widget.Toolbar
+         android:id="@+id/toolbar_patient_findhospital"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/colorPrimary"
+         android:minHeight="?attr/actionBarSize">
+
+     </android.support.v7.widget.Toolbar>
+
+
+     <android.support.v7.widget.SearchView
+         android:id="@+id/searchview_patient_findhospital"
+         style="@style/Widget.AppCompat.SearchView.ActionBar"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_marginTop="4dp"
+         app:queryBackground="@color/colorWhite">
+
+     </android.support.v7.widget.SearchView>-->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search by City"
+        android:id="@+id/edittext_search_edittext"
+        android:background="@drawable/custom_button_white"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginBottom="@dimen/font_20"
+        android:padding="@dimen/margin_10dp"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh_patient_findhospital"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/scrollview_pateint_findhospital"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/relativeLayout_patient_find_hospital"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/relativelayout_cardview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/scrollview_pateint_findhospital"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginBottom="@dimen/margin_50dp"
+                android:scrollbars="vertical"
+
+
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview_patient_findhospital"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_50dp"
+                    android:scrollbars="vertical">
+
+
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

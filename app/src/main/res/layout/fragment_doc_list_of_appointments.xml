@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativelayout_doc_listofappointment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.project.docxp.doctorfragment.DocListOfAppointmentsFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_58"
+        android:padding="@dimen/padding_5dp">
+
+        <EditText
+            android:id="@+id/edittext_doc_listofappoinrment"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/select_date"
+            android:textSize="@dimen/font_18" />
+
+        <Button
+            android:id="@+id/button_doc_listofappoinrments_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:text="@string/search"
+            android:layout_marginLeft="@dimen/margin_5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/font_16" />
+    </RelativeLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swiperefresh_doc_listofappointment"
+        android:layout_below="@+id/relativeLayout">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollview_doc_listofappointment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/relativelayout_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/scrollview_doc_listofappointment"
+            android:layout_centerHorizontal="true"
+            android:scrollbars="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_doc_listofappointment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:layout_marginBottom="@dimen/margin_50dp">
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

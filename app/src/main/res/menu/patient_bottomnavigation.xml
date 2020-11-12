@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/button_patient_home"
+        android:icon="@drawable/home"
+        android:title="@string/home"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/button_patient_hospital"
+        android:icon="@drawable/findhospital"
+        android:title="@string/hospital"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/button_patient_notification"
+        android:icon="@drawable/notification"
+        android:title="@string/notification"
+        app:showAsAction="never"/>
+
+</menu>

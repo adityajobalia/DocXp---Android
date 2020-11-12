@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="@dimen/margin_5dp"
+    android:layout_marginRight="@dimen/margin_5dp"
+    android:layout_marginTop="@dimen/margin_5dp"
+    android:orientation="vertical">
+
+    <!--<RelativeLayout
+        android:id="@+id/relativelayout_pateint_docspecialityheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textview_pateint_doctorspeciality_main_letter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:text="A"
+            android:textColor="@color/colorButton"
+            android:textSize="@dimen/font_24sp"
+            android:textStyle="bold" />
+
+
+        <View
+            android:id="@+id/view__pateint_doctorspeciality_main_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding_3dp"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_toEndOf="@+id/textview_pateint_doctorspeciality_main_letter"
+            android:background="@color/colorButton" />
+
+    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_40dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview_pateint_doctorspeciality_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/radius_5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:padding="@dimen/padding_5dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circularimagview_pateint_doctorspeciality"
+                    android:layout_width="@dimen/height_80"
+                    android:layout_height="@dimen/height_80"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="start|center|left|center_horizontal"
+                    android:elevation="@dimen/width_24dp"
+                    android:src="@drawable/profile"
+                    app:civ_border_color="@color/colorTransperant"
+                    app:civ_border_width="0dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textview_pateint_doctorspeciality_doctorname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_toRightOf="@id/circularimagview_pateint_doctorspeciality"
+                    android:text="name"
+                    android:textColor="@color/colorButton"
+                    android:textSize="@dimen/font_18"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/textview_pateint_doctorspeciality_doctorspeciality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview_pateint_doctorspeciality_doctorname"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginTop="@dimen/padding_3dp"
+                    android:layout_toRightOf="@id/circularimagview_pateint_doctorspeciality"
+                    android:text="speciality" />
+
+
+                <TextView
+                    android:id="@+id/textview_pateint_doctorspeciality_doctorhospitalname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview_pateint_doctorspeciality_doctorspeciality"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginTop="@dimen/padding_3dp"
+                    android:layout_toRightOf="@id/circularimagview_pateint_doctorspeciality"
+                    android:text="hospital" />
+                <TextView
+                    android:id="@+id/textview_pateint_doctorspeciality_doctorcity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview_pateint_doctorspeciality_doctorhospitalname"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_toRightOf="@id/circularimagview_pateint_doctorspeciality"
+                    android:layout_marginTop="@dimen/padding_3dp"
+                    android:text="city" />
+                <TextView
+                    android:id="@+id/textview_pateint_doctorspeciality_doctorcontact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview_pateint_doctorspeciality_doctorcity"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginTop="@dimen/padding_3dp"
+                    android:layout_toRightOf="@id/circularimagview_pateint_doctorspeciality"
+                    android:drawableLeft="@drawable/ic_mobile"
+                    android:drawablePadding="@dimen/padding_7dp"
+                    android:text="12356789" />
+                <TextView
+                    android:id="@+id/textview_pateint_doctorspeciality_doctoremail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview_pateint_doctorspeciality_doctorcontact"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginTop="@dimen/padding_3dp"
+                    android:layout_toRightOf="@id/circularimagview_pateint_doctorspeciality"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:drawablePadding="@dimen/padding_3dp"
+                    android:text="gkfgjfdkgfjg" />
+
+
+                <Button
+                    android:id="@+id/button_pateint_doctorspeciality_bookappintment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/height_40"
+                    android:layout_below="@id/textview_pateint_doctorspeciality_doctoremail"
+                    android:layout_marginTop="@dimen/padding_5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="@string/book_appointment"
+                    android:textColor="@color/colorWhite"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

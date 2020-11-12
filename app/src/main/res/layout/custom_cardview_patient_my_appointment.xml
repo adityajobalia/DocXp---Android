@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview_patient_myappointment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_5dp"
+        app:cardBackgroundColor="@color/colorTransperant"
+        app:cardCornerRadius="@dimen/radius_2dp"
+        app:contentPadding="@dimen/padding_5dp"
+        android:layout_marginBottom="@dimen/margin_40dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_5dp">
+            <TextView
+                android:id="@+id/textview_patient_myappointment_patient_nm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patient name"
+                android:textSize="@dimen/font_18"
+                android:textColor="@color/colorButton"
+                />
+
+            <TextView
+                android:id="@+id/textview_patient_myappointment_doctorname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorButton"
+                android:layout_below="@id/textview_patient_myappointment_patient_nm"
+                android:text="Doctor Name"
+                android:textSize="@dimen/font_17"/>
+
+            <TextView
+                android:id="@+id/textview_patient_myappointment_hospitalname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview_patient_myappointment_doctorname"
+                android:text="Hospital " />
+            <TextView
+                android:id="@+id/textview_patient_myappointment_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5dp"
+                android:layout_toRightOf="@id/textview_patient_myappointment_hospitalname"
+                android:layout_below="@id/textview_patient_myappointment_doctorname"
+                android:text="Hospital" />
+
+            <TextView
+                android:id="@+id/textview_patient_myappointment_appointmentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_datetime"
+                android:drawablePadding="@dimen/padding_5dp"
+                android:layout_below="@id/textview_patient_myappointment_hospitalname"
+                android:text="Date"/>
+            <TextView
+                android:id="@+id/textview_patient_myappointment_appointmentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_below="@id/textview_patient_myappointment_hospitalname"
+                android:layout_toRightOf="@id/textview_patient_myappointment_appointmentDate"
+                android:text="Time" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/patient_nav_home"
+            android:icon="@drawable/home"
+            android:checkable="true"
+            android:enabled="true"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/patient_nav_profile"
+            android:icon="@drawable/profile_24dp"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/patient_nav_nearbyhospital"
+            android:icon="@drawable/ic_location"
+            android:title="@string/near_by_hospital" />
+        <item
+            android:id="@+id/patient_nav_findhospital"
+            android:icon="@drawable/findhospital"
+            android:title="@string/find_hospital" />
+        <item
+            android:id="@+id/patient_nav_bookappointment"
+            android:icon="@drawable/bookappointment"
+            android:title="@string/book_appointment" />
+        <item
+            android:id="@+id/patient_nav_myappointment"
+            android:icon="@drawable/myappointment_24dp"
+            android:title="@string/my_appointment" />
+        <item
+            android:id="@+id/patient_nav_emergencycontactlist"
+            android:icon="@drawable/emergencycontactlist"
+            android:title="@string/emergency_contact_list" />
+
+        <item
+            android:id="@+id/patient_nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Log Out" />
+
+
+    </group>
+
+</menu>

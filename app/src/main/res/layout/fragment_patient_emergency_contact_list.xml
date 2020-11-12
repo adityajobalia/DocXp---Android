@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_10dp"
+    tools:context="com.project.docxp.patientfragment.PatientEmergencyContactListFragment">
+
+    <RelativeLayout
+        android:id="@+id/relative_pateint_emergency_contact_list_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/button_emergency_contact_list_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:background="@drawable/custom_button_event"
+            android:padding="@dimen/padding_10dp"
+            android:text="@string/edit_contact"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/font_18" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_cardview_myappointment"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relative_pateint_emergency_contact_list_btn"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="vertical">
+
+     <!--   <android.support.v7.widget.CardView
+            android:id="@+id/cardview_pateint_emergency_contectlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardview_doc_home_listofappointment"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_10dp"
+            app:cardCornerRadius="@dimen/default_circle_indicator_radius"
+            app:cardPreventCornerOverlap="true">-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_10dp">
+
+                <TextView
+                    android:id="@+id/textview_emergencycontectlist_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/font_18"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_emergencycontectlist_contect_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="phone"
+                    android:layout_below="@id/textview_emergencycontectlist_name"
+
+                     />
+
+                <TextView
+                    android:id="@+id/textview_emergencycontectlist_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview_emergencycontectlist_contect_no"
+                    />
+
+                <!--<ImageView
+                    android:id="@+id/imageview_emergencycontect_reject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_reject" />-->
+
+            </RelativeLayout>
+
+
+        <!--</android.support.v7.widget.CardView>-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

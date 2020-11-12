@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="G:\android_project\DocXp\app\src\main\assets"><file name="update_btn_24.png" path="G:\android_project\DocXp\app\src\main\assets\update_btn_24.png"/></source><source path="G:\android_project\DocXp\app\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="G:\android_project\DocXp\app\src\debug\assets"/></dataSet></merger>

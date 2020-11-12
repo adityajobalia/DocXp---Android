@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+
+    //backgrpung color
+    <item android:right="@dimen/background_right"
+        android:left="@dimen/background_left"
+        android:top="@dimen/background_top"
+        android:bottom="@dimen/background_botton">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/default_circle_indicator_radius"></corners>
+
+            <solid
+                android:color="@color/colorButton"></solid>
+            <padding android:left="@dimen/padding_background_left"
+                android:right="@dimen/padding_background_right"
+                android:top="@dimen/padding_background_top"
+                android:bottom="@dimen/padding_background_bottom"></padding>
+        </shape>
+    </item>
+
+
+</layer-list>

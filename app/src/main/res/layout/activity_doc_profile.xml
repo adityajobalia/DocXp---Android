@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.docxp.DocProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/prfile_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_300"
+        android:background="@color/colorPrimary">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/doc_profile_image"
+            android:layout_width="@dimen/width_160"
+            android:layout_height="@dimen/height_160"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:src="@drawable/profile"
+            app:civ_border_color="@color/colortrans"
+             />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabbutton_doc_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/doc_profile_image"
+            android:layout_alignEnd="@+id/doc_profile_image"
+            android:src="@android:drawable/ic_menu_camera" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_400"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_240dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="@dimen/margin_25dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15dp"
+            android:padding="@dimen/padding_5dp">
+
+
+            <android.support.v7.widget.RecyclerView
+               android:id="@+id/doc_recyclerview_profile"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:scrollbars="vertical">
+
+          </android.support.v7.widget.RecyclerView>
+
+            <!--  <TextView
+                 android:id="@+id/doc_speciality"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:padding="@dimen/padding_10dp"
+                 android:text="@string/speciality"
+                 android:textSize="@dimen/font_16" />
+
+             <TextView
+                 android:id="@+id/doc_speciality_content"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="@dimen/margin_80dp"
+                 android:layout_toRightOf="@id/doc_speciality"
+                 android:padding="@dimen/padding_10dp"
+                 android:text="Orthopadic"
+                 android:textSize="@dimen/font_16"
+                 android:layout_alignParentTop="true" />
+
+             <ImageView
+                 android:id="@+id/doc_speciality_update"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_toRightOf="@id/doc_speciality_content"
+                 android:padding="@dimen/padding_10dp"
+                 android:src="@drawable/update_btn" />
+
+             <View
+                 android:id="@+id/doc_view_speciality"
+                 android:layout_width="match_parent"
+                 android:layout_height="2dp"
+                 android:layout_below="@id/doc_speciality"
+                 android:background="@color/colorPrimary" />
+
+             <TextView
+                 android:id="@+id/doc_mobile"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/doc_view_speciality"
+                 android:padding="@dimen/padding_10dp"
+                 android:text="@string/mobile"
+                 android:textSize="@dimen/font_16" />
+
+             <TextView
+                 android:id="@+id/doc_mobile_content"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBaseline="@+id/doc_mobile"
+                 android:layout_alignBottom="@+id/doc_mobile"
+                 android:layout_alignEnd="@+id/doc_speciality_content"
+                 android:padding="@dimen/padding_10dp"
+                 android:text="+91 1234567890"
+                 android:textSize="@dimen/font_16" />
+
+             <ImageView
+                 android:id="@+id/doc_mobile_update"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/doc_speciality_update"
+                 android:layout_marginTop="@dimen/margin_5dp"
+                 android:layout_toRightOf="@id/doc_mobile_content"
+                 android:padding="@dimen/padding_10dp"
+                 android:src="@drawable/update_btn" />
+
+             <View
+                 android:id="@+id/doc_view_mobile"
+                 android:layout_width="match_parent"
+                 android:layout_height="2dp"
+                 android:layout_below="@id/doc_mobile"
+                 android:background="@color/colorPrimary" />
+
+             <TextView
+                 android:id="@+id/doc_email"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/doc_view_mobile"
+                 android:padding="@dimen/padding_10dp"
+                 android:text="@string/email"
+                 android:textSize="@dimen/font_16" />
+
+             <TextView
+                 android:id="@+id/doc_email_content"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBaseline="@+id/doc_email"
+                 android:layout_alignBottom="@+id/doc_email"
+                 android:layout_alignEnd="@+id/doc_mobile_content"
+                 android:padding="@dimen/padding_10dp"
+                 android:text="abc@gmail.com"
+                 android:textSize="@dimen/font_16" />
+
+             <ImageView
+                 android:id="@+id/doc_email_update"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/doc_mobile_update"
+                 android:layout_marginTop="@dimen/margin_5dp"
+                 android:layout_toRightOf="@id/doc_email_content"
+                 android:padding="@dimen/padding_10dp"
+                 android:src="@drawable/update_btn" />
+
+             <View
+                 android:id="@+id/doc_view_email"
+                 android:layout_width="match_parent"
+                 android:layout_height="2dp"
+                 android:layout_below="@id/doc_email"
+                 android:background="@color/colorPrimary" />
+
+             <TextView
+                 android:id="@+id/doc_password"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/doc_view_email"
+                 android:padding="@dimen/padding_10dp"
+                 android:text="@string/password"
+                 android:textSize="@dimen/font_16" />
+
+             <TextView
+                 android:id="@+id/doc_password_content"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:padding="@dimen/padding_10dp"
+                 android:text="abc123"
+                 android:layout_alignEnd="@+id/doc_email_content"
+                 android:layout_marginEnd="9dp"
+                 android:layout_below="@+id/doc_view_email" />
+
+             <ImageView
+                 android:id="@+id/doc_password_update"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/doc_email_update"
+                 android:layout_marginTop="@dimen/margin_5dp"
+                 android:layout_toRightOf="@id/doc_password_content"
+                 android:padding="@dimen/padding_10dp"
+                 android:src="@drawable/update_btn" />
+ -->
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
